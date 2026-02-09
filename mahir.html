@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Car Collection</title>
+
+<style>
+/* ====== GLOBAL RESET ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
+/* ====== BACKGROUND ====== */
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1a1f2b, #0b0f17);
+    color: #fff;
+}
+
+/* ====== HEADER ====== */
+header {
+    padding: 40px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+header span {
+    color: #f5b754;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f5b754;
+}
+
+/* ====== HERO ====== */
+.hero {
+    padding: 60px 8%;
+    max-width: 900px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    margin-top: 20px;
+    color: #aaa;
+    max-width: 600px;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 14px 36px;
+    background: linear-gradient(135deg, #f5b754, #ff8c00);
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(245,183,84,0.4);
+}
+
+/* ====== COLLECTION ====== */
+section {
+    padding: 80px 8%;
+}
+
+section h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* ====== GRID ====== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* ====== CARD ====== */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 24px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.15), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.card h4 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    margin-top: 10px;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+.price {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #f5b754;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    padding: 40px 8%;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Elite<span>Cars</span></h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Collection</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Discover the World’s<br>Most Exclusive Cars</h2>
+    <p>
+        A hand-picked collection of luxury, performance, and iconic vehicles
+        designed for true automotive enthusiasts.
+    </p>
+    <button>Explore Collection</button>
+</div>
+
+<section>
+    <h3>Featured Collection</h3>
+
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Supercar">
+            <h4>Lamborghini Aventador</h4>
+            <p>V12 engine, aggressive design, and unmatched performance.</p>
+            <div class="price">$450,000</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c" alt="Luxury Sedan">
+            <h4>Mercedes-Benz S-Class</h4>
+            <p>Ultimate comfort with cutting-edge technology.</p>
+            <div class="price">$130,000</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023" alt="Sports Car">
+            <h4>Porsche 911 Turbo</h4>
+            <p>Timeless design with track-ready performance.</p>
+            <div class="price">$190,000</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def" alt="Electric Car">
+            <h4>Tesla Model S Plaid</h4>
+            <p>Electric power meets supercar acceleration.</p>
+            <div class="price">$120,000</div>
